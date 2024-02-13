@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Martian+Mono:wght@100..800&display=swap');
+
+h1 {
+    font-family: 'Martian Mono', sans-serif;
+    font-size: 12em;
+}
+
+h2 {
+    text-align: center;
+}
+
+*{
+    box-sizing: border-box;
+    background-color: #F1B9C1;
+}
+
+.timer-box{
+    display: flex;
+    justify-content: center;
+}
+
+.timer{
+    margin-bottom: 5%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 12em;
+    height: 2.5em;
+    border-radius: 35px;
+    background: #ECADB6;
+    box-shadow:  18px 18px 35px #cb959d,
+             -18px -18px 35px #ffc5cf;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1em;
+    border-color: #E94B61;
+    margin-top: 15px;
+}
+
+button:hover{
+    opacity: 70%;
+    transform: translateX(20px);
+    transition: ease-in-out;
+    transition-duration: .6s;
+}
+
+#vid1{
+    width: 200px;
+    height: 200px;
+    opacity: 75%;
+    position: absolute;
+    margin-top: 27em;
+    margin-right: 67em;
+    display: none;
+}
+
+#vid2{
+    width: 200px;
+    height: 200px;
+    opacity: 75%;
+    position: absolute;
+    margin-top: 27em;
+    margin-left: 67em;
+    display: none;
+}
+
+
+#happy-msg {
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 1.5em;
+    font-size: 4.5em;
+    padding: 20px;
+}
+
+#pepe {
+    height: 400px;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yes-btn{
+    margin-right: 30px;
+}
+
+.button-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#ghost{
+    height: 400px;
+}
+
+.msg {
+    margin-top: -2em;
+}
+
+.confetti-button{
+    position: absolute;
+}

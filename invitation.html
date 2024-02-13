@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./pepeSit.gif" alt="pepe showing his love for you" id="pepe">
+    </div>
+    <div class="text">
+        <p>Call me stupid, call me dumb</p>
+        <p>If you join me for a date I'll go numb</p>
+        <p>Answer me, my heart's beating like a drum</p>
+        <br>
+        <p>So, be my Valentine's?</p>
+    </div>
+    <div class="button-container">
+        <button class="yes-btn" onclick="toMain()">Yeah sure</button>
+        <button class="no-btn" onclick="makeYesButtonBigger()">Uhh no?</button>
+    </div>
+
+
+
+    <script>
+         function toMain() {
+            window.location.href = 'please.html';
+        }
+
+        function makeYesButtonBigger() {
+            const yesButton = document.querySelector('.yes-btn');
+            const noButton = document.querySelector('.no-btn');
+            const yesMsg = ["Come on bal", "You're makin it hard", "Say yes huhu", "this will get more bigger", "You're cute", "Im crying", "this is fun?", 
+                "bubby sit", "*cries", "SAY YEEEEEESSS!!!", "*dead"];
+            const noMsg = ["really?", "naur", "NAURRR", "i said no 😠", "😠😠😠"]
+            let yesClick = false;
+
+            const currentSize = window.getComputedStyle(yesButton).fontSize;
+            const newSize = (parseFloat(currentSize) * 1.15) + 'px'; // Increase size by 20%
+            yesButton.style.fontSize = newSize;
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = Math.random() * (window.innerWidth - noButton.offsetWidth) + 'px';
+            noButton.style.top = Math.random() * (window.innerHeight - noButton.offsetHeight) + 'px';
+
+            if (!yesClick) {
+                const randomIndex = Math.floor(Math.random() * yesMsg.length);
+                yesButton.textContent = yesMsg[randomIndex];
+                yesClick = true;
+
+                const randomNo = Math.floor(Math.random() * noMsg.length);
+                noButton.textContent = noMsg[randomNo];
+
+
+            }
+
+
+        }
+    </script>
+</body>
+</html>

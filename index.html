@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="timer-box">
+            <h1 class="timer">00:00:07</h1>
+        </div>
+        <h2 id="happy-msg" style="display: none;">Happy Valentine's Day!</h2>
+        <img src="pepegif.gif" id="vid1">
+        <img src="pepegif.gif" id="vid2">
+        <button class="proceed-btn" onclick="toInv()" style="display: none;">What's this all about?</button>
+    </div>
+
+    <script>
+         function toInv() {
+            window.location.href = './invitation.html';
+        }
+
+        const time = document.querySelector(".timer");
+        const msg = document.querySelector("#happy-msg");
+        const proceed = document.querySelector(".proceed-btn");
+        const vid1 = document.querySelector("#vid1");
+        const vid2 = document.querySelector("#vid2");
+
+        let timeLeft = 7;
+        countdown = setInterval(() => {
+        timeLeft--;
+        time.textContent = `00:00:0${timeLeft}`
+        if (timeLeft ==0){
+            clearInterval(countdown);
+            msg.style.display = "block";
+            proceed.style.display = "block";
+            vid1.style.display = "block";
+            vid2.style.display = "block";
+
+        }
+    }, 1000)
+    </script>
+</body>
+</html>
